@@ -283,7 +283,7 @@
                     Width="100"
                     Height="25"
                     Margin="190 105 0 0"
-                    Click="Logout_Click">
+                    Click="Ordering_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Center"
                                Foreground="White">Poručite</TextBlock>

@@ -133,5 +133,11 @@ namespace BirthdayCake.Views
                 this.WindowState = WindowState.Minimized;
             }
         }
+
+        private void Ordering_Click(object sender, RoutedEventArgs e)
+        {
+            CreateOrder createOrder = new CreateOrder();
+            createOrder.ShowDialog();
+        }
     }
 }

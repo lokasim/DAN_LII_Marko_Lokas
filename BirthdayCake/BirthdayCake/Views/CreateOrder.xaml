@@ -1,0 +1,125 @@
+﻿<Window x:Class="BirthdayCake.Views.CreateOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirthdayCake.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Add Reports"
+        Height="1000"
+        Width="1450"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowState="Maximized"
+        ShowInTaskbar="True"
+        MouseLeftButtonDown="DragMe"
+        AllowsTransparency="True"
+        Topmost="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Border BorderBrush="Orange"
+                Height="550"
+                Width="450"
+                BorderThickness="5">
+            <Grid  Height="550"
+                   Width="450" Margin="-5 -5 0 0"
+                   VerticalAlignment="Stretch"
+                   HorizontalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="0,490,0,0"></StackPanel>
+                <Grid Margin="4"
+                      Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="80*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock HorizontalAlignment="Stretch"
+                               VerticalAlignment="Stretch"
+                               Grid.Row="0"
+                               Background="Orange">
+            <Label x:Name="lblNaslov"
+                        Foreground="White"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Stretch"
+                        BorderBrush="#89000000"
+                        FontSize="36"
+                        FontWeight="Bold"
+                        Width="440"
+                        Content="Kreiraj porudžbinu">
+                
+            </Label></TextBlock>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <DatePicker Grid.Column="0"
+                                    Grid.Row="2"
+                                    IsEnabled="False"
+                                    x:Name="dpDateReports"
+                                    HorizontalAlignment="Center"
+                                    materialDesign:HintAssist.Hint="Date"
+                                    Margin="0,0,35,0"
+                                    Height="40"
+                                    Width="100"
+                                    Text="{Binding Report.CurrentDate, UpdateSourceTrigger=PropertyChanged}"
+                                    SelectedDate="{x:Static system:DateTime.Now}"
+                                    SelectedDateFormat="Short"
+                                    HorizontalContentAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="3" />
+                    <Grid Grid.Row="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1"
+                                x:Name="btnDodaj"
+                                Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                                ToolTip="{Binding dugmeDodaj}"
+                                Margin="-40,0,0,0"
+                                Width="60"
+                                Height="60"
+                                Command="{Binding Save, UpdateSourceTrigger=PropertyChanged}"
+                                Background="#FF8BC34A"
+                                BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon VerticalAlignment="Center"
+                                                     HorizontalAlignment="Right"
+                                                     Kind="Check"
+                                                     Height="40"
+                                                     Width="40" />
+                        </Button>
+                        <Button Grid.Column="0"
+                                x:Name="btnIzlaz"
+                                Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                                ToolTip="Napusti dijalog"
+                                Margin="40,0,0,0"
+                                Width="60"
+                                Height="60"
+                                Command="{Binding Close, UpdateSourceTrigger=PropertyChanged}"
+                                Background="#FFC34A4A"
+                                BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon VerticalAlignment="Center"
+                                                     HorizontalAlignment="Left"
+                                                     Kind="Close"
+                                                     Height="40"
+                                                     Width="40" />
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

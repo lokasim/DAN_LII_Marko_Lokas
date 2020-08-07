@@ -43,3 +43,5 @@ C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\bin\Debug
 C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\obj\Debug\Views\CakeMenu.g.cs
 C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\obj\Debug\BirthdayCake_Content.g.cs
 C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\obj\Debug\Views\CakeMenu.baml
+C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\obj\Debug\Views\CreateOrder.g.cs
+C:\Users\panonit\Desktop\DAN_LII_Marko_Lokas\BirthdayCake\BirthdayCake\obj\Debug\Views\CreateOrder.baml
