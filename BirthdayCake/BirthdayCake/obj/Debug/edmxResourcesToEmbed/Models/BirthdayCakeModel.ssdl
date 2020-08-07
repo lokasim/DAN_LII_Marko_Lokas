@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BirthdayCakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCake">
+    <Key>
+      <PropertyRef Name="CakeID" />
+    </Key>
+    <Property Name="CakeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SellingPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblGuest">
+    <Key>
+      <PropertyRef Name="GuestID" />
+    </Key>
+    <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GuestNameSurname" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="GuestAddress" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="PhoneNumber" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="GuestUsername" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GuestPassword" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NumberOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="tblOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTimeOrder" Type="datetime" Nullable="false" />
+    <Property Name="Guest" Type="int" Nullable="false" />
+    <Property Name="TotalPrice" Type="int" Nullable="false" />
+    <Property Name="TotalCake" Type="int" Nullable="false" />
+    <Property Name="CakeList" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Order_Guest">
+    <End Role="tblGuest" Type="Self.tblGuest" Multiplicity="1" />
+    <End Role="tblOrder" Type="Self.tblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblGuest">
+        <PropertyRef Name="GuestID" />
+      </Principal>
+      <Dependent Role="tblOrder">
+        <PropertyRef Name="Guest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BirthdayCakeModelStoreContainer">
+    <EntitySet Name="tblCake" EntityType="Self.tblCake" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblGuest" EntityType="Self.tblGuest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOrder" EntityType="Self.tblOrder" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Order_Guest" Association="Self.FK_Order_Guest">
+      <End Role="tblGuest" EntitySet="tblGuest" />
+      <End Role="tblOrder" EntitySet="tblOrder" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

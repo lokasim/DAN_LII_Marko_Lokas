@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BirthdayCakeModelStoreContainer" CdmEntityContainer="BirthdayCakeEntities">
+    <EntitySetMapping Name="tblCakes">
+      <EntityTypeMapping TypeName="BirthdayCakeModel.tblCake">
+        <MappingFragment StoreEntitySet="tblCake">
+          <ScalarProperty Name="CakeID" ColumnName="CakeID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGuests">
+      <EntityTypeMapping TypeName="BirthdayCakeModel.tblGuest">
+        <MappingFragment StoreEntitySet="tblGuest">
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="GuestNameSurname" ColumnName="GuestNameSurname" />
+          <ScalarProperty Name="GuestAddress" ColumnName="GuestAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="GuestUsername" ColumnName="GuestUsername" />
+          <ScalarProperty Name="GuestPassword" ColumnName="GuestPassword" />
+          <ScalarProperty Name="NumberOrder" ColumnName="NumberOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrders">
+      <EntityTypeMapping TypeName="BirthdayCakeModel.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrder">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="DateTimeOrder" ColumnName="DateTimeOrder" />
+          <ScalarProperty Name="Guest" ColumnName="Guest" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="TotalCake" ColumnName="TotalCake" />
+          <ScalarProperty Name="CakeList" ColumnName="CakeList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

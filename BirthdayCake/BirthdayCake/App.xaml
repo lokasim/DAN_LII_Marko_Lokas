@@ -10,7 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Pink.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Orange.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
@@ -127,7 +127,7 @@
                                 </VisualStateManager.VisualStateGroups>
                                 <Border x:Name="Background"
                                         CornerRadius="0,0,5,5"
-                                        Background="#2196F3">
+                                        Background="Orange">
                                     <Border Margin="1,0,3,1"
                                             BorderBrush="#59FFFFFF"
                                             BorderThickness="2"
@@ -163,7 +163,7 @@
                 <!--<Setter Property="WindowBorderBrush"
                         Value="Black" />-->
                 <Setter Property="WindowBackground"
-                        Value="#2196F3" />
+                        Value="Orange" />
                 <Setter Property="WindowOpacity"
                         Value="1" />
                 <Setter Property="FontSize"
