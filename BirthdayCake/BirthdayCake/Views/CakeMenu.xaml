@@ -10,7 +10,7 @@
         Title="Mistico Plus"
         MinHeight="200"
         MinWidth="700"
-        Height="600"
+        Height="700"
         Width="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -105,6 +105,7 @@
                         <!--<Label x:Name="lblKorisnickoIme" Content="Sodoma" FontSize="14" HorizontalContentAlignment="Right" Margin="20" VerticalContentAlignment="Top"/>-->
                         <Grid Margin="0,0,-200,0">
                             <Button Name="Napusti"
+                                    materialDesign:ButtonAssist.CornerRadius="10"
                                     Margin="120,15,190,15"
                                     Click="Logout_Click">
                                 <StackPanel Orientation="Horizontal">
@@ -208,16 +209,16 @@
                   IsReadOnly="True"
                   FontSize="14"
                   Height="auto"
-                  Width="auto"
-                  Margin="10 230 10 0"
-                  MinColumnWidth="75"
+                  Width="300"
+                  Margin="10 200 10 0"
+                  MinColumnWidth="100"
                   Background="White"
                   AlternatingRowBackground="LightYellow"
                   HorizontalContentAlignment="Center"
                   MaxColumnWidth="200"
                   VerticalAlignment="Top"
                   HorizontalAlignment="Center"
-                  Visibility="Collapsed"
+                  Visibility="Visible"
                   HeadersVisibility="Column"
                   AutoGenerateColumns="False"
                   HorizontalGridLinesBrush="Black"
@@ -226,26 +227,17 @@
                   Foreground="White"
                   FontWeight="Medium">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Category"
-                                    Binding="{Binding Expr1}">
-                    <DataGridTextColumn.ElementStyle>
-                        <Style>
-                            <Setter Property="TextBlock.TextAlignment"
-                                    Value="Center" />
-                        </Style>
-                    </DataGridTextColumn.ElementStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Product"
+                <DataGridTextColumn Header="Torta"
                                     Binding="{Binding ProductName}">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
-                            <Setter Property="TextBlock.TextWrapping"
-                                    Value="Wrap" />
+                            <Setter Property="TextBlock.TextAlignment"
+                                    Value="Left" />
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Description"
-                                    Binding="{Binding ProductDescription}">
+                <DataGridTextColumn Header="Cena (RSD)"
+                                    Binding="{Binding SellingPrice, StringFormat=N2}">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping"
@@ -253,8 +245,8 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Price (RSD)"
-                                    Binding="{Binding PriceProduct, StringFormat=N2}">
+                <DataGridTextColumn Header="Namenjeno"
+                                    Binding="{Binding KindCake}">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping"
@@ -269,18 +261,34 @@
               Grid.Column="1"
               VerticalAlignment="Top"
               HorizontalAlignment="Center">
-            <TextBlock Margin="0 100 0 150"
+            <TextBlock Margin="0 80 0 150"
                        x:Name="msgHappy"
                        Foreground="Orange"
                        FontSize="25"
                        FontStyle="Oblique"
                        FontWeight="Bold">Hvala vam što koristite naše usluge :)</TextBlock>
-            <TextBlock Margin="0 140 40 100"
+            <TextBlock Margin="0 120 40 100"
                        Foreground="Orange"
                        FontSize="25"
                        FontStyle="Oblique"
                        HorizontalAlignment="Right"
                        FontWeight="Light">L-Cake</TextBlock>
+            <TextBlock Margin="70 167 0 0"
+                       Foreground="Orange"
+                       FontSize="25"
+                        FontWeight="Bold"
+                       HorizontalAlignment="Left">Torta Meni</TextBlock>
+            <Button Name="ordering"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    Width="100"
+                    Height="25"
+                    Margin="190 105 0 0"
+                    Click="Logout_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                               Foreground="White">Poručite</TextBlock>
+                </StackPanel>
+            </Button>
         </Grid>
         <!--Donja traka sa vremenom i datumom-->
         <Grid Grid.Column="1"

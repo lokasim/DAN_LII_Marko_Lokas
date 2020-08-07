@@ -8,6 +8,7 @@
     <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="SellingPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="KindCake" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="tblGuest">
     <Key>

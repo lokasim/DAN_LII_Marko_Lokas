@@ -18,5 +18,6 @@ namespace BirthdayCake.Models
         public string ProductName { get; set; }
         public decimal PurchasePrice { get; set; }
         public decimal SellingPrice { get; set; }
+        public string KindCake { get; set; }
     }
 }

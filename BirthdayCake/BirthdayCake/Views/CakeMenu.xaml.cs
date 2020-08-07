@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BirthdayCake.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -23,6 +25,8 @@ namespace BirthdayCake.Views
         public CakeMenu()
         {
             InitializeComponent();
+            this.DataContext = new CakeMenuViewModel(this);
+            this.Language = XmlLanguage.GetLanguage("sr-SR");
 
             Time();
         }

@@ -13,6 +13,7 @@
           <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="SellingPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="KindCake" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="tblGuest">
           <Key>
@@ -71,6 +72,7 @@
           <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="SellingPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="KindCake" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="tblGuest">
           <Key>
@@ -131,6 +133,7 @@
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
                 <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+                <ScalarProperty Name="KindCake" ColumnName="KindCake" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

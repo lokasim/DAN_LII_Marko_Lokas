@@ -48,7 +48,8 @@ CREATE TABLE tblCake(
 	CakeID			int identity(1,1) NOT NULL,
 	ProductName			nvarchar (50) NOT NULL,
 	PurchasePrice		decimal(18,2) NOT NULL,
-	SellingPrice		decimal(18,2) NOT NULL
+	SellingPrice		decimal(18,2) NOT NULL,
+	KindCake			nvarchar(10) NOT NULL
 	)
 CREATE TABLE tblOrder(
 	OrderID				int identity(1,1) NOT NULL,
@@ -83,15 +84,15 @@ ALTER TABLE tblOrder
 
 
 
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Ljubavno gnezdo', 1000.00, 1000.00*1.2)
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Lincer', 2000.00, 2000.00*1.2)
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Cheese cake', 1200.00, 1200.00*1.2)
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Doboš', 2500.00, 2500.00*1.2)
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Bomba', 800.00, 800.00*1.2)
-INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice)
-	VALUES ('Kinder', 1100.00, 1100.00*1.2)
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Ljubavno gnezdo', 1000.00, 1000.00*1.2, 'Odrasli')
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Lincer', 2000.00, 2000.00*1.2, 'Odrasli')
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Cheese cake', 1200.00, 1200.00*1.2, 'Odrasli')
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Doboš', 2500.00, 2500.00*1.2, 'Deca')
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Bomba', 800.00, 800.00*1.2, 'Deca')
+INSERT INTO tblCake(ProductName, PurchasePrice, SellingPrice, KindCake)
+	VALUES ('Kinder', 1100.00, 1100.00*1.2, 'Deca')

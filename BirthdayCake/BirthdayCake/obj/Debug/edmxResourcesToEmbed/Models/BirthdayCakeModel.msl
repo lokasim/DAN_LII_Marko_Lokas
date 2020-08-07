@@ -8,6 +8,7 @@
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />
           <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
           <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="KindCake" ColumnName="KindCake" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

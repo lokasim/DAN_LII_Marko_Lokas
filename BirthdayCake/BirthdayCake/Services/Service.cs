@@ -133,5 +133,27 @@ namespace BirthdayCake.Services
                 return null;
             }
         }
+
+        /// <summary>
+        /// Cake menu
+        /// </summary>
+        /// <returns></returns>
+        public List<tblCake> GetAllMenu()
+        {
+            try
+            {
+                using (BirthdayCakeEntities context = new BirthdayCakeEntities())
+                {
+                    List<tblCake> list = new List<tblCake>();
+                    list = (from x in context.tblCakes select x).ToList();
+                    return list;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Exception: " + ex.Message.ToString());
+                return null;
+            }
+        }
     }
 }
